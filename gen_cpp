@@ -1,0 +1,9 @@
+#!/bin/bash
+res_name="$1.cpp"
+shift
+rm $res_name > /dev/null 2>&1
+cat ~/cpp/templates/template_top.cpp >> $res_name
+for arg
+do cat ~/cpp/templates/$arg.cpp >> $res_name
+done
+cat ~/cpp/templates/template_bot.cpp >> $res_name
