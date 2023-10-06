@@ -1,12 +1,44 @@
+#include <algorithm>
 #include <bits/stdc++.h>
 using namespace std;
 
+/*
+// Containers
+vector<T>; // dynamisk array
+
+set<T>; // unike verdier i sortert rekkefølge O(lgn)
+multiset<T>; // verdier i sortert rekkefølge O(lgn)
+unordered_set<T>; // unike verdier i usortert rekkefølge O(1)
+unordered_multiset<T>; // verdier i usortert rekkefølge O(1)
+
+list<T>; // Dobbelt lenket liste
+queue<T>; // FIFO
+stack<T>; // LIFO
+priority_queue<T>; // Heap interface (default max-heap)
+
+map<T,T>; // Key -> value, keys unike og sortert O(lgn)
+multimap<T,T>; // Key -> value, keys er ikke unike men sortert O(lgn)
+unordered_map<T,T>; // Key -> value, keys er unike og usortert O(1)
+unordered_multimap<T, T>; // Key -> value, keys verken unike eller sortert O(1)
+
+bitset<NUM_BITS>; // NUM_BITS bits, kan opereres på med bitwise operatorer
+                  // Kan redusere tidskompleksiteten fra f.eks en vector
+                  // med 0 og 1 med en faktor av 32 (antall bits i en int)
+
+// Algorithms
+sort(begin(v), end(v)); // v er f.eks. en vector
+lower_bound(begin(v), end(v), x); // v skal være sortert
+                               // returnerer en peker til første element som er
+                               // >= x
+upper_bound(begin(v), end(v), x); // v skal være sortert
+                                  // returnerer en peker til første element 
+                                  // som er > x 
+next_permutation(begin(v), end(v)); // Transformerer v til neste permutasjon
+                                    // som kommer etter v i leksikografisk 
+                                    // rekkefølge
+*/
 int main() {
     {
-        // Dictionary
-        // O(lg n) insert / lookup / delete
-        // Nøkler ligger sortert
-        // Oftere raskere enn unordered_map
         map<int,int> mp;
         mp[5] = 4; // sette en verdi
         cout << mp[5] << endl;
@@ -21,9 +53,6 @@ int main() {
         }
     }
     {
-        // Dictionary
-        // O(1) insert / lookup / delete
-        // Nøkler ligger usortert
         // Mye overhead, men kan være raskere enn map
         unordered_map<int,int> mp;
     }
